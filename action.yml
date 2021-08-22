@@ -12,6 +12,9 @@ inputs:
     description: If false, action doesn't check for duplicate msg.
     required: false
     default: true
+  pull_request_number:
+    required: false
+    
 runs:
   using: 'docker'
   image: 'Dockerfile'
