@@ -14,10 +14,11 @@ inputs:
     default: true
   pull_request_number:
     required: false
-    
+    default: ""
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.msg }}
     - ${{ inputs.check_for_duplicate_msg }}
+    - ${{ inputs.pull_request_number }}
